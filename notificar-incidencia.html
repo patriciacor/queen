@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>    
+    <fieldset>
+      <form method="post" action="procesar-incidencia.php">
+      <legend>
+      Datos de la incidencia:
+        <label for="usuario"> <p>Usuario:</p>
+            <input id="usuario" type="text" minlength="5" pattern={A-z}   required/>
+        </label><br>
+        <label for="select"> <p>Departamento:</p>
+            <select id="select">
+            <option value="informática">informática</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Ventas">Ventas</option>
+            </select>
+        </label>
+        <br>
+        <label for="description"> 
+          <p>Descripción:</p>
+          <textarea cols="40" rows="3" id="description" placeholder="Describa la incidencia..." required></textarea>
+            
+        </label> <br>
+        <label for="password"><p>Contraseña:</p>
+            <input type="password" id="password" required/>
+        </label>
+        </legend>
+        </fieldset>
+ <fieldset>
+    <legend> Botones de reset y envio <br>
+     <button type="reset">Reset</button>
+     <button type="submit">Enviar</button>
+    </legend>
+ </fieldset>
+   </form>
+   <style>
+   
+    input,select,textarea
+{
+        margin-bottom: 10px;
+    }
+    button{
+        margin-top: 20px;
+    margin-left: 20px;    }
+   </style>
+</body>
+</html>
